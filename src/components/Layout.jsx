@@ -9,6 +9,10 @@ export default function Layout() {
   const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
   const current = tools.find(tl => tl.path === pathname);
+  const env = import.meta.env;
+  const fb = env.VITE_SOCIAL_FACEBOOK || 'https://facebook.com';
+  const zalo = env.VITE_SOCIAL_ZALO || 'https://zalo.me';
+  const tele = env.VITE_SOCIAL_TELEGRAM || 'https://t.me';
   return (
     <div className="min-h-screen bg-white text-zinc-900">
       <div className="flex max-w-7xl mx-auto">
@@ -30,9 +34,9 @@ export default function Layout() {
             <div className="flex items-center justify-between text-sm opacity-70">
               <div>© {new Date().getFullYear()} {t('title')}</div>
               <div className="flex gap-3">
-                <a href="https://facebook.com" target="_blank" className="hover:underline">Facebook</a>
-                <a href="https://zalo.me" target="_blank" className="hover:underline">Zalo</a>
-                <a href="https://t.me" target="_blank" className="hover:underline">Telegram</a>
+                <a href={fb} target="_blank" className="hover:underline">Facebook</a>
+                <a href={zalo} target="_blank" className="hover:underline">Zalo</a>
+                <a href={tele} target="_blank" className="hover:underline">Telegram</a>
               </div>
             </div>
           </footer>

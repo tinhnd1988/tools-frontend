@@ -66,10 +66,12 @@ const resources = {
   },
 };
 
+const defaultLng = import.meta.env.VITE_DEFAULT_LANG || 'vi';
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'vi',
-  fallbackLng: 'vi',
+  lng: defaultLng,
+  fallbackLng: defaultLng,
   interpolation: { escapeValue: false },
 });
 

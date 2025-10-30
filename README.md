@@ -1,16 +1,55 @@
-# React + Vite
+# Utility Tools – Frontend (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern React app using Context API and TailwindCSS v4.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node 20+
+- Yarn 4 (Corepack)
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+corepack enable
+cd frontend
+yarn install
+```
 
-## Expanding the ESLint configuration
+Create `.env` (already added by tooling):
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+VITE_API_BASE_URL=http://mmo-tools-backend.test/api
+VITE_DEFAULT_LANG=vi
+VITE_SOCIAL_FACEBOOK=https://facebook.com
+VITE_SOCIAL_ZALO=https://zalo.me
+VITE_SOCIAL_TELEGRAM=https://t.me
+```
+
+## Run
+
+```bash
+yarn dev
+```
+
+## Build
+
+```bash
+yarn build
+yarn preview
+```
+
+## Tech
+
+- React 19, Vite, TailwindCSS v4
+- i18next (vi default, en), axios, react-router-dom
+- chart.js for analytics
+
+## Structure
+
+- `src/contexts` – `ApiContext`, `ThemeContext`
+- `src/components` – `Layout`, `Sidebar`
+- `src/pages` – tools screens (QR, VietQR, Links, Notes, WHOIS, IP, DNS, HTTP, Crypto, Data, Cron, UUID, 2FA, UA, Proxy)
+
+## Configure
+
+- API base URL and socials via `.env` (variables start with `VITE_`).
