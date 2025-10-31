@@ -3,7 +3,7 @@ import { useApi } from '../contexts/ApiContext';
 
 export default function QrTool() {
   const { http } = useApi();
-  const [text, setText] = useState('https://example.com');
+  const [text, setText] = useState('https://www.utiltools.asia');
   const [img, setImg] = useState('');
 
   async function generate(e) {

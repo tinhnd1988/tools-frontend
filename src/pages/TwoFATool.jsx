@@ -3,8 +3,8 @@ import { useApi } from '../contexts/ApiContext';
 
 export default function TwoFATool() {
   const { http } = useApi();
-  const [issuer, setIssuer] = useState('MMO Tools');
-  const [account, setAccount] = useState('user@example.com');
+  const [issuer, setIssuer] = useState('Utility Tools');
+  const [account, setAccount] = useState('info@utiltools.asia');
   const [secret, setSecret] = useState('');
   const [otpauth, setOtpauth] = useState('');
   const [qr, setQr] = useState('');

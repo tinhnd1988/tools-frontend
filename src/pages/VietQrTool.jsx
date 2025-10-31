@@ -4,9 +4,9 @@ import { useApi } from '../contexts/ApiContext';
 export default function VietQrTool() {
   const { http } = useApi();
   const [bank, setBank] = useState('VCB');
-  const [account, setAccount] = useState('0123456789');
-  const [amount, setAmount] = useState('');
-  const [info, setInfo] = useState('');
+  const [account, setAccount] = useState('0061001191224');
+  const [amount, setAmount] = useState('20000');
+  const [info, setInfo] = useState('SUPPORT WEBSITE');
   const [img, setImg] = useState('');
 
   async function generate(e) {

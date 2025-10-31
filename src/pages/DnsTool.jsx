@@ -3,7 +3,7 @@ import { useApi } from '../contexts/ApiContext';
 
 export default function DnsTool() {
   const { http } = useApi();
-  const [host, setHost] = useState('example.com');
+  const [host, setHost] = useState('utiltools.asia');
   const [type, setType] = useState('ANY');
   const [result, setResult] = useState(null);
 

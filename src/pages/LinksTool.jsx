@@ -6,7 +6,7 @@ ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, ArcEleme
 
 export default function LinksTool() {
   const { http } = useApi();
-  const [url, setUrl] = useState('https://example.com');
+  const [url, setUrl] = useState('https://www.utiltools.asia');
   const [code, setCode] = useState('');
   const [items, setItems] = useState([]);
   const [analytics, setAnalytics] = useState(null);

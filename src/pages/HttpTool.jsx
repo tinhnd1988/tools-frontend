@@ -3,7 +3,7 @@ import { useApi } from '../contexts/ApiContext';
 
 export default function HttpTool() {
   const { http } = useApi();
-  const [url, setUrl] = useState('https://example.com');
+  const [url, setUrl] = useState('https://www.utiltools.asia');
   const [method, setMethod] = useState('GET');
   const [headers, setHeaders] = useState('');
   const [body, setBody] = useState('');

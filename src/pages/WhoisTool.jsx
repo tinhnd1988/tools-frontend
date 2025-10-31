@@ -3,7 +3,7 @@ import { useApi } from '../contexts/ApiContext';
 
 export default function WhoisTool() {
   const { http } = useApi();
-  const [domain, setDomain] = useState('example.com');
+  const [domain, setDomain] = useState('utiltools.asia');
   const [result, setResult] = useState(null);
 
   async function lookup(e) {
