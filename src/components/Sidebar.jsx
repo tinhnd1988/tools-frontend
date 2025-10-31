@@ -3,10 +3,10 @@ import { tools, donateItem } from '../config/tools';
 import { useTranslation } from 'react-i18next';
 import toolsLogo from '../assets/tools-logo.png';
 
-export default function Sidebar() {
+export default function Sidebar({ className = '', onNavigate = () => {} }) {
   const { t } = useTranslation();
   return (
-    <aside className="w-64 shrink-0 border-r bg-white sticky top-0 h-screen p-4">
+    <aside className={`w-64 shrink-0 border-r bg-white h-screen p-4 ${className}`}>
       <div className="flex items-center gap-2 mb-4">
         <img src={toolsLogo} alt="logo" className="w-8 h-8 rounded" />
         <h1 className="text-xl font-bold">{t('title')}</h1>
@@ -22,6 +22,7 @@ export default function Sidebar() {
                 `flex items-center gap-2 rounded px-3 py-2 text-sm ${isActive ? 'bg-indigo-600 text-white' : 'hover:bg-zinc-100'}`
               }
               end={item.path === '/'}
+              onClick={onNavigate}
             >
               <Icon className="w-4 h-4" /> {t(item.labelKey)}
             </NavLink>
@@ -33,6 +34,7 @@ export default function Sidebar() {
             className={({ isActive }) =>
               `flex items-center gap-2 rounded px-3 py-2 text-sm ${isActive ? 'bg-indigo-600 text-white' : 'hover:bg-zinc-100'}`
             }
+            onClick={onNavigate}
           >
             {t(donateItem.labelKey)}
           </NavLink>
