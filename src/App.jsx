@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import SEO from './components/SEO';
 import Home from './pages/Home';
 import QrTool from './pages/QrTool';
 import WhoisTool from './pages/WhoisTool';
@@ -22,6 +23,7 @@ import UuidTool from './pages/UuidTool';
 export default function App() {
   return (
     <BrowserRouter>
+      <SEO />
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
