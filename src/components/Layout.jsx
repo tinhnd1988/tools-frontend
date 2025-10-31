@@ -73,6 +73,7 @@ export default function Layout() {
                 <span className="text-zinc-400">|</span>
                 <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
                 <Link to="/terms" className="hover:underline">Terms of Service</Link>
+                <Link to="/data-deletion" className="hover:underline">Data Deletion</Link>
               </div>
             </div>
           </footer>

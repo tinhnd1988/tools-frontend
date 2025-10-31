@@ -22,6 +22,7 @@ import UuidTool from './pages/UuidTool';
 import AuthCallback from './pages/AuthCallback';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import DataDeletion from './pages/DataDeletion';
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="uuid" element={<UuidTool />} />
           <Route path="privacy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsOfService />} />
+          <Route path="data-deletion" element={<DataDeletion />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -5,46 +5,46 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-      <p className="text-sm text-zinc-600 mb-6">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <h1 className="text-3xl font-bold mb-6">{t('privacy_title')}</h1>
+      <p className="text-sm text-zinc-600 mb-6">{t('privacy_last_updated')}: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">1. Information We Collect</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section1_title')}</h2>
         <p className="text-zinc-700">
-          When you use our service and authenticate via Google or Facebook, we collect the following information:
+          {t('privacy_section1_desc')}
         </p>
         <ul className="list-disc list-inside space-y-2 ml-4 text-zinc-700">
-          <li>Your name as provided by the authentication provider</li>
-          <li>Your email address</li>
-          <li>Your profile picture/avatar</li>
-          <li>Authentication provider identifier (Google ID or Facebook ID)</li>
+          <li>{t('privacy_section1_item1')}</li>
+          <li>{t('privacy_section1_item2')}</li>
+          <li>{t('privacy_section1_item3')}</li>
+          <li>{t('privacy_section1_item4')}</li>
         </ul>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">2. How We Use Your Information</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section2_title')}</h2>
         <p className="text-zinc-700">
-          We use the information we collect to:
+          {t('privacy_section2_desc')}
         </p>
         <ul className="list-disc list-inside space-y-2 ml-4 text-zinc-700">
-          <li>Authenticate and identify you when you use our services</li>
-          <li>Provide you with personalized features and content</li>
-          <li>Improve our services and user experience</li>
-          <li>Communicate with you regarding your account or our services</li>
+          <li>{t('privacy_section2_item1')}</li>
+          <li>{t('privacy_section2_item2')}</li>
+          <li>{t('privacy_section2_item3')}</li>
+          <li>{t('privacy_section2_item4')}</li>
         </ul>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">3. Data Storage and Security</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section3_title')}</h2>
         <p className="text-zinc-700">
-          We take reasonable measures to protect your personal information. Your data is stored securely and we use industry-standard security practices to safeguard your information. However, no method of transmission over the Internet or electronic storage is 100% secure.
+          {t('privacy_section3_desc')}
         </p>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">4. Third-Party Services</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section4_title')}</h2>
         <p className="text-zinc-700">
-          We use Google and Facebook authentication services. When you authenticate through these providers, you are also subject to their privacy policies:
+          {t('privacy_section4_desc')}
         </p>
         <ul className="list-disc list-inside space-y-2 ml-4 text-zinc-700">
           <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Privacy Policy</a></li>
@@ -53,39 +53,38 @@ export default function PrivacyPolicy() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">5. Your Rights</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section5_title')}</h2>
         <p className="text-zinc-700">
-          You have the right to:
+          {t('privacy_section5_desc')}
         </p>
         <ul className="list-disc list-inside space-y-2 ml-4 text-zinc-700">
-          <li>Access your personal information</li>
-          <li>Request correction of inaccurate information</li>
-          <li>Request deletion of your account and data</li>
-          <li>Withdraw your consent at any time</li>
+          <li>{t('privacy_section5_item1')}</li>
+          <li>{t('privacy_section5_item2')}</li>
+          <li>{t('privacy_section5_item3')}</li>
+          <li>{t('privacy_section5_item4')}</li>
         </ul>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">6. Cookies and Tracking</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section6_title')}</h2>
         <p className="text-zinc-700">
-          We use cookies and similar technologies to maintain your authentication session and improve your experience. You can control cookie settings through your browser preferences.
+          {t('privacy_section6_desc')}
         </p>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">7. Changes to This Policy</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section7_title')}</h2>
         <p className="text-zinc-700">
-          We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+          {t('privacy_section7_desc')}
         </p>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">8. Contact Us</h2>
+        <h2 className="text-2xl font-semibold">{t('privacy_section8_title')}</h2>
         <p className="text-zinc-700">
-          If you have any questions about this Privacy Policy, please contact us through our support channels.
+          {t('privacy_section8_desc')}
         </p>
       </section>
     </div>
   );
 }
-
