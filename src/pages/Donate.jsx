@@ -6,8 +6,8 @@ export default function Donate() {
   return (
     <div className="space-y-4 text-center">
       <div className="text-sm opacity-70">{t('donate_desc')}</div>
-      <div className="rounded-xl border p-4 inline-block bg-white dark:bg-zinc-900">
-        <img src={qrImg} alt="Donate QR" className="w-96 h-96 object-contain" />
+      <div className="rounded-xl inline-block bg-white text-center">
+        <img src={qrImg} alt="Donate QR" className="w-1/2 object-cover inline-block" />
       </div>
     </div>
   );
