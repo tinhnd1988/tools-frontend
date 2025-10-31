@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { ApiProvider } from './contexts/ApiContext'
 import { AuthProvider } from './contexts/AuthContext'
+import { LoadingProvider } from './contexts/LoadingContext'
 import GoogleAnalytics from './components/GoogleAnalytics'
 import './i18n'
 
@@ -13,9 +14,11 @@ createRoot(document.getElementById('root')).render(
     <GoogleAnalytics />
     <ThemeProvider>
       <ApiProvider>
-        <AuthProvider>
-          <App />
-        </AuthProvider>
+        <LoadingProvider>
+          <AuthProvider>
+            <App />
+          </AuthProvider>
+        </LoadingProvider>
       </ApiProvider>
     </ThemeProvider>
   </StrictMode>,

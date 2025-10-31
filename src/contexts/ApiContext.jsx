@@ -6,7 +6,27 @@ const ApiContext = createContext(null);
 export function ApiProvider({ children }) {
   const baseURL = import.meta.env.VITE_API_BASE_URL || 'http://mmo-tools-backend.test/api';
   const client = useMemo(() => {
-    const instance = axios.create({ baseURL, timeout: 10000 });
+    const instance = axios.create({ baseURL, timeout: 30000 }); // 30 seconds
+    
+    // Request interceptor - add loading
+    instance.interceptors.request.use((config) => {
+      // Dispatch custom event for loading
+      window.dispatchEvent(new CustomEvent('api-request-start', { detail: config }));
+      return config;
+    });
+    
+    // Response interceptor - remove loading
+    instance.interceptors.response.use(
+      (response) => {
+        window.dispatchEvent(new CustomEvent('api-request-end'));
+        return response;
+      },
+      (error) => {
+        window.dispatchEvent(new CustomEvent('api-request-end'));
+        return Promise.reject(error);
+      }
+    );
+    
     return instance;
   }, [baseURL]);
 
