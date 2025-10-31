@@ -19,12 +19,16 @@ import CryptoTool from './pages/CryptoTool';
 import DataTool from './pages/DataTool';
 import CronTool from './pages/CronTool';
 import UuidTool from './pages/UuidTool';
+import AuthCallback from './pages/AuthCallback';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 export default function App() {
   return (
     <BrowserRouter>
       <SEO />
       <Routes>
+        <Route path="auth/callback" element={<AuthCallback />} />
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="qr" element={<QrTool />} />
@@ -44,6 +48,8 @@ export default function App() {
           <Route path="data" element={<DataTool />} />
           <Route path="cron" element={<CronTool />} />
           <Route path="uuid" element={<UuidTool />} />
+          <Route path="privacy" element={<PrivacyPolicy />} />
+          <Route path="terms" element={<TermsOfService />} />
         </Route>
       </Routes>
     </BrowserRouter>

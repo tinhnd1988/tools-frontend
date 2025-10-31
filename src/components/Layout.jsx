@@ -1,5 +1,6 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import AuthButton from './AuthButton';
 import { useState } from 'react';
 // import { useTheme } from '../contexts/ThemeContext';
 import { useTranslation } from 'react-i18next';
@@ -49,23 +50,29 @@ export default function Layout() {
               <span className="text-sm">Menu</span>
             </button>
             <h2 className="text-lg font-semibold">{current ? t(current.labelKey) : t('title')}</h2>
-            <select
-              className="rounded px-3 py-1.5 border bg-white"
-              value={i18n.language}
-              onChange={(e) => i18n.changeLanguage(e.target.value)}
-            >
-              <option value="vi">Tiếng Việt</option>
-              <option value="en">English</option>
-            </select>
+            <div className="flex items-center gap-2">
+              <AuthButton />
+              <select
+                className="rounded px-3 py-1.5 border bg-white"
+                value={i18n.language}
+                onChange={(e) => i18n.changeLanguage(e.target.value)}
+              >
+                <option value="vi">Tiếng Việt</option>
+                <option value="en">English</option>
+              </select>
+            </div>
           </div>
           <Outlet />
           <footer className="pt-10 border-t">
-            <div className="flex items-center justify-between text-sm opacity-70">
+            <div className="flex items-center justify-between text-sm opacity-70 flex-wrap gap-4">
               <div>© {new Date().getFullYear()} {t('title')}</div>
-              <div className="flex gap-3">
-                <a href={fb} target="_blank" className="hover:underline">Facebook</a>
-                <a href={zalo} target="_blank" className="hover:underline">Zalo</a>
-                <a href={tele} target="_blank" className="hover:underline">Telegram</a>
+              <div className="flex gap-3 flex-wrap">
+                <a href={fb} target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
+                <a href={zalo} target="_blank" rel="noopener noreferrer" className="hover:underline">Zalo</a>
+                <a href={tele} target="_blank" rel="noopener noreferrer" className="hover:underline">Telegram</a>
+                <span className="text-zinc-400">|</span>
+                <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
+                <Link to="/terms" className="hover:underline">Terms of Service</Link>
               </div>
             </div>
           </footer>
