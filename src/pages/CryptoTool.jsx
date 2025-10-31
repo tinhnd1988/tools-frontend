@@ -38,7 +38,7 @@ export default function CryptoTool() {
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`px-4 py-2 text-sm ${tab === t.id ? 'bg-indigo-600 text-white' : 'hover:bg-zinc-100'}`}
+            className={`px-4 py-2 cursor-pointer text-sm ${tab === t.id ? 'bg-indigo-600 text-white' : 'hover:bg-zinc-100'}`}
           >
             {t.label}
           </button>

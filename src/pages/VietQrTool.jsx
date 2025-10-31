@@ -106,8 +106,8 @@ export default function VietQrTool() {
       )}
 
       {img && (
-        <div className="space-y-2">
-          <img src={img} alt="vietqr" className="w-72 border rounded" />
+        <div className="space-y-4 flex flex-col items-center">
+          <img src={img} alt="vietqr" className="w-1/2 border rounded" />
           <button
             onClick={download}
             className="flex items-center gap-2 rounded bg-green-600 text-white px-4 py-2"

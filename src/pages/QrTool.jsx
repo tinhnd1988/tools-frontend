@@ -96,7 +96,7 @@ export default function QrTool() {
       )}
 
       {img && (
-        <div className="space-y-2">
+        <div className="space-y-4 flex flex-col items-center">
           <img src={img} alt="qr" className="w-48 h-48 border rounded" />
           <button
             onClick={download}
