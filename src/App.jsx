@@ -19,10 +19,12 @@ import CryptoTool from './pages/CryptoTool';
 import DataTool from './pages/DataTool';
 import CronTool from './pages/CronTool';
 import UuidTool from './pages/UuidTool';
+import TempMailTool from './pages/TempMailTool';
 import AuthCallback from './pages/AuthCallback';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import DataDeletion from './pages/DataDeletion';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
@@ -49,9 +51,11 @@ export default function App() {
           <Route path="data" element={<DataTool />} />
           <Route path="cron" element={<CronTool />} />
           <Route path="uuid" element={<UuidTool />} />
+          <Route path="temp-mail" element={<TempMailTool />} />
           <Route path="privacy" element={<PrivacyPolicy />} />
           <Route path="terms" element={<TermsOfService />} />
           <Route path="data-deletion" element={<DataDeletion />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

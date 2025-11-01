@@ -2,21 +2,36 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/tools-icon.png" />
     <link rel="apple-touch-icon" href="/tools-icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Utility Tools - Bộ công cụ tiện ích miễn phí: QR Code, Rút gọn Link, WHOIS, IP Lookup, DNS, HTTP, Crypto, Data, Cron, UUID, 2FA và nhiều hơn nữa" />
     <meta name="keywords" content="utility tools, qr code, url shortener, whois, ip lookup, dns, crypto, tools" />
     <meta name="author" content="Utility Tools" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Utility Tools - Công cụ tiện ích miễn phí" />
     <meta property="og:description" content="Bộ công cụ tiện ích miễn phí: QR Code, Rút gọn Link, WHOIS, IP Lookup, DNS, HTTP, Crypto, Data, Cron, UUID, 2FA và nhiều hơn nữa" />
     <meta property="og:image" content="/tools-logo.png" />
     <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
     <title>Utility Tools - Công cụ tiện ích miễn phí</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>

@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   ScanLine,
   Siren,
+  Mail,
 } from 'lucide-react';
 
 export const tools = [
@@ -28,6 +29,7 @@ export const tools = [
   { path: '/2fa', labelKey: 'twofa', descKey: 'twofa_desc', icon: ShieldCheck },
   { path: '/ua', labelKey: 'ua', descKey: 'ua_desc', icon: Siren },
   { path: '/proxy', labelKey: 'proxy', descKey: 'proxy_desc', icon: Network },
+  { path: '/temp-mail', labelKey: 'tempmail', descKey: 'tempmail_desc', icon: Mail },
 ];
 
 export const donateItem = { path: '/donate', labelKey: 'donate', icon: ScanLine };

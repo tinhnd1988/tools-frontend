@@ -2,13 +2,21 @@ import { NavLink } from 'react-router-dom';
 import { tools, donateItem } from '../config/tools';
 import { useTranslation } from 'react-i18next';
 import toolsLogo from '../assets/tools-logo.png';
+import OptimizedImage from './OptimizedImage';
 
 export default function Sidebar({ className = '', onNavigate = () => {} }) {
   const { t } = useTranslation();
   return (
     <aside className={`w-64 shrink-0 border-r bg-white h-screen p-4 ${className}`}>
       <div className="flex items-center gap-2 mb-4">
-        <img src={toolsLogo} alt="logo" className="w-8 h-8 rounded" />
+        <OptimizedImage 
+          src={toolsLogo} 
+          alt="logo" 
+          width={32} 
+          height={32} 
+          className="w-8 h-8 rounded" 
+          loading="eager"
+        />
         <h1 className="text-xl font-bold">{t('title')}</h1>
       </div>
       <nav className="space-y-1">
