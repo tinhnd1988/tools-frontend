@@ -7,7 +7,7 @@ export default function UuidTool() {
   const [uuid, setUuid] = useState('');
 
   async function generate() {
-    const { data } = await http.get('/uuid/generate', { params: { version } });
+    const { data } = await http.post('/uuid/generate', { version });
     setUuid(data.uuid);
   }
 

@@ -8,7 +8,7 @@ export default function WhoisTool() {
 
   async function lookup(e) {
     e.preventDefault();
-    const { data } = await http.get('/whois', { params: { domain } });
+    const { data } = await http.post('/whois', { domain });
     setResult(data);
   }
 

@@ -9,7 +9,7 @@ export default function DnsTool() {
 
   async function lookup(e) {
     e.preventDefault();
-    const { data } = await http.get('/dns', { params: { host, type } });
+    const { data } = await http.post('/dns', { host, type });
     setResult(data);
   }
 

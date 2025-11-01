@@ -15,7 +15,7 @@ export default function CryptoTool() {
   const [tab, setTab] = useState('password');
 
   async function genPass() {
-    const { data } = await http.get('/crypto/password', { params: { length, symbols } });
+    const { data } = await http.post('/crypto/password', { length, symbols });
     setPassword(data.password);
   }
   async function doHash() {

@@ -17,8 +17,12 @@ export default function VietQrTool() {
 
   async function generate(e) {
     e.preventDefault();
-    const res = await http.get('/vietqr/image', { 
-      params: { bank, account, amount: amount || undefined, info: info || undefined }, 
+    const res = await http.post('/vietqr/image', { 
+      bank, 
+      account, 
+      amount: amount || undefined, 
+      info: info || undefined 
+    }, { 
       responseType: 'blob' 
     });
     const blob = res.data;

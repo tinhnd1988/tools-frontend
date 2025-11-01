@@ -8,7 +8,7 @@ export default function IpTool() {
 
   async function query(e) {
     e.preventDefault();
-    const { data } = await http.get('/ip', { params: ip ? { ip } : {} });
+    const { data } = await http.post('/ip', ip ? { ip } : {});
     setData(data);
   }
 

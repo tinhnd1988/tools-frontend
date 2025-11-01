@@ -7,7 +7,7 @@ export default function CronTool() {
   const [list, setList] = useState([]);
 
   async function preview() {
-    const { data } = await http.get('/cron/preview', { params: { expr, count: 5 } });
+    const { data } = await http.post('/cron/preview', { expr, count: 5 });
     setList(data.next || []);
   }
 

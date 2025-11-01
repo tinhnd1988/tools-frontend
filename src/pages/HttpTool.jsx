@@ -10,7 +10,7 @@ export default function HttpTool() {
   const [result, setResult] = useState(null);
 
   async function checkStatus() {
-    const { data } = await http.get('/http/status', { params: { url, method } });
+    const { data } = await http.post('/http/status', { url, method });
     setResult(data);
   }
 
